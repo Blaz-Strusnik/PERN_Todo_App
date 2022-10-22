@@ -31,13 +31,14 @@ const Task = () => {
         <Fragment>
 
                     <h1 className="text-center mt-5">RNEP Todo App</h1>
-                    <table class="table mt-5 text-center">
+                    <table className="table mt-5 text-center">
                         
                         <tbody>
                         <tr>
                             <td>
         <form className="form-group " onSubmit={onSubmitForm}>
-        <label for="taskDesc" class="form-label">Task</label>
+        <input disabled type="hidden" name="_csrf" value="_csrf"></input>
+        <label  className="form-label">Task</label>
                 <input
                     type="text"
                     className="form-control"
@@ -45,7 +46,7 @@ const Task = () => {
                     id=""
                     value={taskDesc}
                     onChange={event => setTaskDesc(event.target.value)} />
-                    <label for="startDate" class="form-label">Start date</label>
+                    <label htmlFor="startDate" className="form-label">Start date</label>
                     <input
                     type="datetime-local"
                     className="form-control"
@@ -53,7 +54,7 @@ const Task = () => {
                     id=""
                     value={startdate}
                     onChange={event => setStartDate(event.target.value)} />
-                    <label for="endDate" class="form-label">End date</label>
+                    <label htmlFor="endDate" className="form-label">End date</label>
                     <input
                     type="datetime-local"
                     className="form-control"

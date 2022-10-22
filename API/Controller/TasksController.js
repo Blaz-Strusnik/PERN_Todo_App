@@ -5,6 +5,7 @@ exports.getTasks = (req, res, next) => {
   Tasks.findAll({order: [["createdAt", "DESC"]]}).then(tasks => {
     res.status(200).json({
       tasks: tasks
+
     })
   })
 }

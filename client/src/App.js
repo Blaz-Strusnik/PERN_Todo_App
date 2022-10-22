@@ -8,9 +8,9 @@ import GetTask from "./components/GetTask";
 function App() {
     return (
         <Fragment>
-		<div  class="container">
-			<div  class="row justify-content-center">
-            <div class="table-responsive-sm">
+		<div  className="container">
+			<div  className="row justify-content-center">
+            <div className="table-responsive-sm">
             <Task />
                 <GetTask />
             </div>

@@ -3,12 +3,28 @@ const app = express();
 const cors = require("cors");
 const sequelize = require('./config/dbconn')
 const routes = require('./Router/routes')
+const helmet = require("helmet");
+var csrf = require('csurf');
 
-app.use(cors())
+
+var corsOptions = {
+    origin: 'http://localhost:3000',
+    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+  }
+
+app.use(helmet());
+app.use(cors(corsOptions))
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 // ROUTES 
 app.use(routes)
+
+app.use(csrf());
+
+app.use(function(req, res, next) {
+  res.locals._csrf = req.csrfToken();
+  next();
+});
 // using sql
 //get all tasks
 // app.get("/tasks", async (req, res) => {

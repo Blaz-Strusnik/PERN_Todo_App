@@ -26,7 +26,8 @@ const UpdateTask = ({ task }) => {
         <button type="button" className="btn btn-warning" data-toggle="modal" data-target={`#id${task.id}`}>
             Edit
         </button>
-
+<form>
+<input disabled type="hidden" name="_csrf" value="_csrf"></input>
         <div className="modal" id={`id${task.id}`} onClick={() => setTaskDesc(task.taskDesc)}>
             <div className="modal-dialog">
                 <div className="modal-content">
@@ -35,19 +36,19 @@ const UpdateTask = ({ task }) => {
                         <button type="button" className="close" data-dismiss="modal" onClick={() => setTaskDesc(task.taskDesc)}>&times;</button>
                     </div>
                     <div className="modal-body">
-                    <label for="startDate" class="form-label">Start date</label>
+                    <label htmlFor="startDate" className="form-label">Start date</label>
                         <input className="form-control" type="datetime-local"
                             value={moment(startdate).format('YYYY-MM-DDTHH:MM')}
                             onChange={event => setStartDate(event.target.value)} />
                     </div>
                     <div className="modal-body">
-                    <label for="endDate" class="form-label  ">End date</label>
+                    <label htmlFor="endDate" className="form-label  ">End date</label>
                         <input className="form-control" type="datetime-local"
                             value={moment(enddate).format('YYYY-MM-DDTHH:MM')}
                             onChange={event => setEndDate(event.target.value)} />
                     </div>
                     <div className="modal-body">
-                    <label for="taskDesc" class="form-label">Task</label>
+                    <label htmlFor="taskDesc" className="form-label">Task</label>
                         <input className="form-control" type="text"
                             value={taskDesc}
                             onChange={event => setTaskDesc(event.target.value)} />
@@ -59,6 +60,7 @@ const UpdateTask = ({ task }) => {
                 </div>
             </div>
         </div>
+        </form>
     </Fragment>
 };
 

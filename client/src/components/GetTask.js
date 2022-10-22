@@ -43,8 +43,9 @@ const GetTask = () => {
             </thead>
             <tbody>
                 {tasks.map(task => (
-                    <tr key={task.id}>
-                        <td>{task.taskDesc}</td>
+                    <tr key={task.id}>                        
+                        <td >{task.taskDesc}</td>
+                        <td disabled type="hidden" name="_csrf" value="_csrf"></td>
                         <td>{moment(task.startdate).format('D.M.YYYY H:mm')}</td>
                         <td>{moment(task.enddate).format('D.M.YYYY H:mm')}</td>
                         <td><UpdateTask task={task} /></td>
