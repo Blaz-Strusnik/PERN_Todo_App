@@ -53,7 +53,7 @@ const Task = () => {
                     id=""
                     value={startdate}
                     onChange={event => setStartDate(event.target.value)} />
-                    <label for="endDate" class="form-label">End date</label>
+                    <label for="endDate" class="form-label">End datE</label>
                     <input
                     type="datetime-local"
                     className="form-control"
