@@ -1,9 +1,9 @@
 This is a PERN Todo app in progress
 
-#### To install app run go to backend folder and run in terminal  
+#### To install app go to backend folder and run in terminal  
 - npm install
 
-#### To run app run in terminal  
+#### To run app in terminal  
 - npm start
 
 
