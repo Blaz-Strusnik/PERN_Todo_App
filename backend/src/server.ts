@@ -9,7 +9,7 @@ import { authenticateUser } from './middleware/authMiddleware';
 import sequelize from './config/database';
 
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 9090;
 
 app.use(bodyParser.json());
 app.use(cors());
