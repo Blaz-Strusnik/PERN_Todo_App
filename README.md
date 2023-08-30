@@ -8,3 +8,7 @@ This is a PERN Todo app in progress
 
 
 [Link to the PERN documenation](./backend/Documentation.md)
+
+Todo:
+
+- Clean up Documentation
