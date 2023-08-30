@@ -1,5 +1,5 @@
-import bcrypt from 'bcrypt';
-const User = require('../models/User');
+const bcrypt = require('bcrypt');
+const {User} = require('../models/user');
 
 'use strict';
 
